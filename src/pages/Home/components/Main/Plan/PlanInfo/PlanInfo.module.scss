@@ -1,0 +1,97 @@
+@import '../../../../../../styles/variables.scss';
+
+.info {
+  padding: 38px 55px 0;
+
+  .title {
+    display: flex;
+    color: $blueTitleText;
+    white-space: pre;
+    padding: 27px 0;
+    flex-wrap: wrap;
+  
+    &_bold {
+      &:not(:last-child) {
+        white-space: pre;
+      }
+      font-weight: 700;
+    }
+  }
+
+  .subTitle {
+    max-width: 415px;
+    padding-bottom: 47px;
+  }
+
+  .btns {
+    display: flex;
+    align-items: center;
+
+    .btnBlue {
+      background: $blueBtnBack;
+      padding: 13px 18px;
+      border-bottom-left-radius: $btnBordRad;
+      border-top-left-radius: $btnBordRad;
+      color: $whiteCol;
+      display: flex;
+      align-items: center;
+      transition: .4s;
+
+      .btn__img {
+        margin-left: 6px;
+      }
+
+      &:hover {
+        background: #245BD0;
+      }
+    }
+
+    .btnGray {
+      padding: 12px 21px;
+      color: $grayBtnCol;
+      border: 1px solid $grayBtnCol;
+      border-bottom-right-radius: $btnBordRad;
+      border-top-right-radius: $btnBordRad;
+      transition: .4s;
+
+      &:hover {
+        color: red;
+        border-color: red;
+        background: #000;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1046px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      padding: 38px 0 0;
+      margin-bottom: 100px;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+    }
+
+    .subTitle {
+      max-width: 98%;
+      text-align: center;
+      padding-bottom: 47px;
+    }
+
+    .btns {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .subTitle {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../../../../../styles/variables.scss';
+
+.mySwiper {
+  min-width: 920px;
+
+  .slide {
+    padding: 41px 71px 53px 71px;
+    background: $whiteCol;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 15px 50px #D4DCF1;
+  
+    .customerComent {
+      max-width: 283px;
+      color: $cardCustomersCol;
+      line-height: 1.6em;
+    }
+
+    .customerPhoto {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -31px;
+    }
+  }
+
+  @media screen and (max-width: 940px) {
+    & {
+
+      .slide {
+        justify-content: flex-start;
+      }
+
+      .customerComent {
+        max-width: 700px !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .customerComent {
+      max-width: 600px !important;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .customerComent {
+      max-width: 200px !important;
+    }
+  }
+
+  @media screen and (max-width: 310px) {
+    .slide {
+      padding-left: 20px;
+    }
+  }
+}

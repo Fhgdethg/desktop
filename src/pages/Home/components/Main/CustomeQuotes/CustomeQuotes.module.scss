@@ -1,0 +1,65 @@
+@import '../../../../../styles/variables.scss';
+
+.quotes {
+  padding: 110px 0 180px;
+  background: $quotesLinGradient no-repeat center center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+
+  .wrapper {  
+    padding: 0 100px 0 360px;
+    z-index: 100;
+    margin-top: 34px;
+
+    .subTitle {
+      font: 500 10px 'Roboto', sans-serif;
+      color: $blogTitleCol;
+    }
+
+    .title {
+      color: $blogTitleCol;
+      padding: 31px 0 14px;
+    }
+
+    .text {
+      font-size: 12px;
+      font-weight: 600;
+      color: $quotesTextCol;
+      min-width: 333px;
+      line-height: 1.6em;
+    }
+  }
+
+  @media screen and (max-width: 1030px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+
+      .wrapper {
+        padding: 0 0 70px 0;
+        text-align: center;
+
+        .subTitle {
+          display: flex;
+          justify-content: center;
+        }
+
+        .text {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 350px){
+    .title {
+      font-size: 28px;
+    }
+
+    .text {
+      min-width: 230px !important;
+    }
+  }
+}

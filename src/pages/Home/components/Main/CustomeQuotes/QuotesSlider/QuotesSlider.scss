@@ -1,0 +1,43 @@
+.quotesSwiper {
+  overflow: visible;
+
+  .swiper-wrapper {
+    max-width: 920px;
+  }
+
+  .swiper-slide {
+    transition: .4s;
+    opacity: 0;
+  }
+
+  .swiper-slide-active {
+    opacity: 1;
+  }
+
+  .swiper-slide-next {
+    opacity: 0.6;
+  }
+
+  .swiper-pagination {
+    left: -247px;
+    bottom: -125px;
+  }
+
+  @media screen and (max-width: 1030px) {
+      .swiper-pagination {
+        left: 0px;
+    }
+  }
+
+  @media screen and (max-width: 940px) {
+    .swiper-pagination {
+      left: -300px;
+    }
+  }
+
+  @media screen and (max-width: 310px) {
+    .swiper-pagination {
+      left: -355px;
+    }
+  }
+}

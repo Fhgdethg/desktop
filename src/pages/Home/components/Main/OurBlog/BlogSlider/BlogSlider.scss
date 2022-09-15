@@ -1,0 +1,70 @@
+.blogSwiper {
+  .swiper-button-prev:after, .swiper-button-next:after {
+    display: none;
+  }
+  
+  .swiper-button-prev, .swiper-button-next {
+    background-size: 100%;
+    width: 27px;
+    height: 15px;
+    position: absolute;
+    z-index: 30;
+  }
+  
+  .swiper-button-prev {
+    background: url(../../../../../../assets/icons/pre.svg) no-repeat center center;
+    left: -85px;
+  }
+  
+  .swiper-button-next {
+    background: url(../../../../../../assets/icons/next.svg) no-repeat center center;
+    right: -85px;
+  }
+
+  .swiper-wrapper {
+    max-width: 965px;
+    position: relative;
+  }
+
+  .swiper-pagination {
+    bottom: -145px;
+  }
+
+  @media screen and (max-width: 1165px) {
+    .swiper-button-prev {
+      left: -40px;
+    }
+
+    .swiper-button-next {
+      right: -40px;
+    }
+  }
+
+  @media screen and (max-width: 1060px) {
+    .swiper-wrapper {
+      max-width: 550px;
+    }
+
+    .swiper-pagination {
+      bottom: -80px;
+    }
+  }
+
+  @media screen and (max-width: 660px) {
+    .swiper-wrapper {
+      max-width: 340px;
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    .swiper-wrapper {
+      max-width: 260px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .swiper-button-prev, .swiper-button-next {
+      display: none;
+    }
+  }
+}

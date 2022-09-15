@@ -1,0 +1,54 @@
+@import '../../../../../../../styles/variables.scss';
+
+.infos {
+  margin-left: 67px;
+
+  .title {
+    color: $blogTitleCol;
+  }
+
+  .subTitle {
+    max-width: 413px;
+    font-size: 14px;
+    color: $grayParagraphCol;
+    line-height: 1.6em;
+    margin: 32px 0 31px;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+
+    .btn {
+      padding: 13px 15px;
+      border-radius: $btnBordRad;
+      color: $btnColTextBlue;
+      background: $btnColBackBlue;
+      display: flex;
+      justify-content: center;
+      transition: .4s;
+
+      &:hover {
+        background: #afbbd3;
+        box-shadow: -4px 3px 5px rgba(0,0,0,0.15);
+      }
+    }
+
+    .bookmarks {
+      margin-left: 23px;
+      font: 700 13px 'Quicksand', sans-serif;
+      color: #A6B6DA;
+    }
+  }
+
+  @media screen and (max-width: 1060px) {
+    & {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    margin-top: 0;
+  }
+}

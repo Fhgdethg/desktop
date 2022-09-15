@@ -1,0 +1,59 @@
+@import '../../../styles/variables.scss';
+
+.head__container {
+  display: flex;
+  justify-content: space-between;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    width: 26px;
+    height: 26px;
+  }
+  
+  .btn {
+    padding: 13px 15px;
+    margin-left: 44px;
+    background: $btnColBackBlue;
+    color: $btnColTextBlue;
+    border-radius: $btnBordRad;
+    transition: .4s;
+    text-align: center;
+
+    &:hover {
+      background: #afbbd3;
+      box-shadow: -4px 3px 5px rgba(0,0,0,0.15);
+    }
+  }
+
+  @media screen and (max-width: 925px) {
+    .logo {
+      order: 1;
+    }
+  }
+
+  @media screen and (max-width: 510px) {
+    .btn {
+      margin-left: 10px;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    & {
+      flex-direction: column;
+
+      .wrapper {
+        justify-content: space-between;
+
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+

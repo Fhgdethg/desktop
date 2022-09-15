@@ -1,0 +1,105 @@
+@import '../../../../../styles/variables.scss';
+
+.ourApp {
+  padding: 170px 15px;
+  background: url(../../../../../assets/illustrations/clouds.svg) no-repeat center center;
+  background-size: 100%;
+
+  .container {
+    max-width: 762px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    padding: 20px 0 92px;
+    display: flex;
+    color: $blueTitleText;
+    text-align: center;
+  }
+
+  .appInfos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .btns {
+    padding-top: 92px;
+    display: flex;
+    justify-content: center;
+
+    .redBtn {
+      background: #FFD7D7;
+      color: #D43F3F;
+
+      &:hover {
+        background: #D43F3F;
+        color: #FFD7D7;
+      }
+    }
+
+    .noneCol {
+      background: $whiteCol;
+      color: #DFE2EF;
+
+      .line {
+        width: 15px;
+      }
+
+      &Txt {
+        font-size: 11px;
+        padding: 0 16px;
+      }
+
+      &:hover {
+        background: #DFE2EF;
+        color: #FFF;
+      }
+    }
+
+    .btn {
+      background: $btnColBackBlue;
+      color: $btnColTextBlue;
+  
+      &:hover {
+        background: $btnColTextBlue;
+        color: $btnColBackBlue;
+      }
+    }
+
+    .redBtn, .noneCol, .btn {
+      border-radius: $btnBordRad;
+      padding: 13px 15px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      transition: .4s;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .appInfos {
+      flex-wrap: wrap;
+    }
+
+    .btns {
+      flex-direction: column;
+    }
+
+    .noneCol, .btn {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 435px) {
+    .appInfos {
+      justify-content: center;
+    }
+  }
+}

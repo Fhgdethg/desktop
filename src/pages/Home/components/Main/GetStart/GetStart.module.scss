@@ -1,0 +1,76 @@
+@import '../../../../../styles/variables.scss';
+
+.getStart {
+  padding: 91px 10px;
+  background: $getStartGradient;
+  background-size: 100%;
+
+  .container {
+    max-width: 715px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btnWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 35px;
+
+      .btnLeft, .btnRight {
+        font: 700 13px 'Quicksand', sans-serif;
+        padding: 13px 17px;
+        transition: .4s;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .btnLeft {
+        color: #565F82;
+        border: 1px solid #FFF;
+        border-top-left-radius: $btnBordRad;
+        border-bottom-left-radius: $btnBordRad;
+        background: $whiteCol;
+        box-shadow: 0 5px 15px #6480E8;
+
+        &:hover {
+          color: #274CD4;
+          box-shadow: 0 5px 30px #425fc8;
+        }
+      }
+
+      .btnRight {
+        color: #C7D3FF;
+        border: 1px solid #A0B4FF;
+        border-top-right-radius: $btnBordRad;
+        border-bottom-right-radius: $btnBordRad;
+        background: none;
+
+        &:hover {
+          color: #1c46db;
+          background: #aeb5ce;
+          border-color: #aeb5ce;
+          box-shadow: 0 5px 30px #425fc8;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    .btnWrapper {
+      flex-direction: column;
+
+      .btnRight, .btnLeft {
+        border-radius: $btnBordRad;
+      }
+
+      .btnRight {
+        margin-top: 20px;
+      }
+    }
+  }
+}

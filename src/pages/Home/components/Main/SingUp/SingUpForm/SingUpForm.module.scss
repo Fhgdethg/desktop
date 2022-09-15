@@ -1,0 +1,64 @@
+@import '../../../../../../styles/variables.scss';
+
+.form {
+  display: flex;
+  align-items: center;
+  min-width: 480px;
+  justify-content: space-between;
+
+  .emailInput, .submit {
+    border: none;
+    border-radius: $formBordRad;
+    transition: .4s;
+  }
+
+  .emailInput {
+    min-width: 280px;
+    padding: 21px 23px;
+    background: $singUpEmailBackCol;
+    color: $singUpEmailTextCol;
+    font: 700 13px 'Quicksand', sans-serif;
+    outline: none;
+
+    &::placeholder {
+      color: $singUpEmailTextCol;
+      font: 700 13px 'Quicksand', sans-serif;
+    }
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+
+  .submit {
+    padding: 21px 62px;
+    background: $submitBackCol;
+    color: $whiteCol;
+    font: 700 13px 'Quicksand', sans-serif;
+
+    &:hover {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+      transform: scale(1.01);
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    & {
+      min-width: 200px;
+    }
+  }
+
+  @media screen and (max-width: 510px) {
+    & {
+      flex-direction: column;
+    }
+
+    .submit {
+      margin-top: 15px;
+    }
+
+    .emailInput {
+      min-width: 260px;
+    }
+  }
+}

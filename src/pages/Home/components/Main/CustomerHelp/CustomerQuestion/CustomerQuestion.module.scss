@@ -1,0 +1,69 @@
+@import '../../../../../../styles/variables.scss';
+
+.question {
+  width: 100%;
+  padding-top: 25px;
+  border-bottom: 1px solid $helpMenuBordBotCol;
+  overflow: hidden;
+
+  .seeElements {
+    display: flex;
+    padding: 0 0 25px 22px;
+  }
+
+  &Text {
+    font: 500 15px 'Quicksand', sans-serif;
+    color: $helpMenuQuestionStandartCol;
+    line-height: 1.5em;
+    margin-left: 24px;
+  }
+
+  .noneSeeElements {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 12px 0 80px;
+    justify-content: space-between;
+    margin-bottom: 53px;
+    position: absolute;
+    opacity: 0;
+
+    .answer {
+      color: $helpMenuAnswerTextCol;
+      line-height: 1.6em;
+      max-width: 420px;
+    }
+  
+    .btn {
+      border-radius: $btnBordRad;
+      background: #E8ECF4;
+      color: #7382A3;
+      text-align: center;
+      display: flex;
+      max-width: 200px;
+      justify-content: center;
+      transition: .4s;
+  
+      &:hover {
+        border-radius: calc($btnBordRad * 3);
+        background: #8cadf0;
+        color: #ffffff;
+      }
+    }
+  }
+
+  @media screen and (max-width: 716px) {
+    .noneSeeElements {
+      margin-left: 22px;
+    }
+  }
+
+  @media screen and (max-width: 335px){
+    .noneSeeElements {
+      flex-direction: column;
+
+      .answer {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

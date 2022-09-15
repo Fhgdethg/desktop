@@ -1,0 +1,103 @@
+@import '../../../../../styles/variables.scss';
+
+.slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  .dNone {
+    display: none;
+  }
+
+  .dFlVideo {
+    display: flex;
+    min-width: 90%;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 0 10px;
+  }
+
+  .dFl {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 90px;
+    position: absolute;
+    z-index: 100;
+  }
+
+  .title {
+    display: flex;
+    color: $blueTitleText;
+    white-space: pre;
+    padding: 16px 0 28px;
+    text-align: center;
+    flex-wrap: wrap;
+  
+    &_bold {
+      font-weight: 700;
+    }
+  }
+  
+  .subTitle {
+    max-width: 40%;
+    text-align: center;
+  }
+
+  .btnPlay {
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 844px) {
+    .title {
+      padding: 10px 0 14px;
+    }
+
+    .wraper {
+      top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 634px) {
+    .title {
+      padding: 5px 0 0px;
+      font-size: 32px;
+    }
+
+    .wraper {
+      top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 453px) {
+    .title {
+      padding: 2px 0 0px;
+      margin-bottom: -20px;
+      font-size: 27px;
+    }
+
+    .wraper {
+      top: 5px;
+    }
+  }
+
+  
+  @media screen and (max-width: 341px) {
+    .title {
+      font-size: 20px;
+    }
+  }
+}
+
+

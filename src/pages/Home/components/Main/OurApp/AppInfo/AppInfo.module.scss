@@ -1,0 +1,50 @@
+@import '../../../../../../styles/variables.scss';
+
+.info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 140px;
+  transition: .4s;
+
+  &:hover {
+    transform: rotate(2deg) scale(1.1);
+  }
+
+  .icon {
+    width: 69px;
+    height: 69px;
+    background: $blueGrayIconsBack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .onTitle {
+    padding: 33px 0 25px;
+    color: $blueIconsNames;
+  }
+
+  .subTitle {
+    font-size: 11px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .subTitle {
+      display: flex;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    & {
+      max-width: 200px;
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 435px) {
+    width: 95%;
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../../../../../styles/variables.scss';
+
+.onTitle {
+  font: 500 10px 'Roboto', sans-serif;
+}
+
+.title {
+  display: flex;
+  padding: 16px 0 28px;
+  white-space: pre;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.subTitle {
+  line-height: 1.6em;
+  font-size: 15px;
+}
+
+.onTitle, .title, .subTitle {
+  color: $whiteCol;
+}
+
+@media screen and (max-width: 395px) {
+  .title {
+    font-size: 30px;
+  }
+}

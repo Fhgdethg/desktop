@@ -1,0 +1,118 @@
+@import '../../../../styles/variables.scss';
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  .hamburger {
+    display: none;
+    padding: 10px;
+    background: $btnColBackBlue;
+    transition: .4s;
+    border-radius: $btnBordRad;
+    margin-right: 20px;
+
+    &:hover {
+      background: #afbbd3;
+      box-shadow: -4px 3px 5px rgba(0,0,0,0.15);
+    }
+  }
+
+  .hamburgerIndexClass {
+    position: absolute;
+    z-index: 900;
+  }
+  
+  .navigation__item {
+    transition: .4s;
+    cursor: pointer;
+  
+    &:not(:first-child) {
+      padding-left: 42px;
+    }
+  
+    &:hover {
+      color: $navHoverCol;
+      transform: scale(1.1);
+    }
+  }
+
+  @media screen and (max-width: 925px) {
+    & {
+      order: 0;
+
+      .navigation__item {
+        text-decoration: underline;
+
+        &:hover {
+          transform: scale(1.015);
+        }
+
+        &:not(:first-child) {
+          padding: 10px 0 0 0;
+        }
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    
+
+    @keyframes youCanSee{
+      0% {
+        left: -600px;
+        position: fixed;
+      }
+
+      100% {
+        left: -80px;
+        position: fixed;
+      }
+    }
+
+    .hamburgerCl {
+      display: flex;
+      animation: youCanSee .4s linear 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes youNoneCanSee{
+      0% {
+        left: -80px;
+        position: fixed;
+      }
+
+      99% {
+        left: -600px;
+        position: fixed;
+      }
+      
+      100% {
+        left: -600px;
+        position: fixed;
+      }
+    }
+
+    .hamburgerClNoneSee {
+      display: flex;
+      animation: youNoneCanSee .4s linear 1;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @media screen and (max-width: 510px) {
+    .hamburger {
+      margin-right: 10px;
+    }
+  }  
+
+  @media screen and (max-width: 430px) {
+    .hamburgerCl {
+      position: absolute;
+      left: 500px;
+    }
+  }
+}
+

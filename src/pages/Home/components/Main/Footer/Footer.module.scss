@@ -1,0 +1,29 @@
+.footer {
+  padding: 93px 0;
+  border-top: 1px solid #D8E3FE;
+
+  .private {
+    font: 500 12px 'Quicksand', sans-serif;
+    color: #AEB8D0;
+    margin: 28px 0 0 100px;
+    width: 214px;
+    text-align: left;
+    transition: .4s;
+
+    &:hover {
+      color: rgb(255, 147, 147);
+    }
+  }
+
+  @media screen and (max-width: 925px) {
+    .hamburger {
+      z-index: 900;
+    }
+  }
+
+  @media screen and(max-width: 335px) {
+    .private {
+      margin-left: 0;
+    }
+  }
+}

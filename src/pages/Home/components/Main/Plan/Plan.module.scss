@@ -1,0 +1,50 @@
+@import '../../../../../styles/variables.scss';
+
+.plan {
+  padding: 170px 0;
+  background: $sectionBackColWhiteBlue;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    max-width: 1330px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .desktop {
+    width: 653px;
+    height: auto;
+    transition: .4s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  @media screen and (max-width: 1046px) {
+    & {
+      padding: 100px 0;
+    }
+
+    .container {
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .desktop {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../../../../styles/variables.scss';
+
+.singUp {
+  padding: 118px 10px;
+  background: $singUpBackCol;
+
+  .container {
+    max-width: 890px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .leftWrapper {
+      max-width: 330px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .leftWrapper {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .formWrapper {
+      margin-top: 30px;
+    }
+  }
+}

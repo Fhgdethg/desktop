@@ -1,0 +1,27 @@
+@import '../../../../styles/variables.scss';
+
+.navigation {
+  display: flex;
+  margin-left: 73px;
+  font: 700 12px 'Quicksand', sans-serif;
+  color: $navColor;
+  left: -2800px;
+
+  @media screen and (max-width: 925px) {
+    & {
+      display: none;
+      flex-direction: column;
+      padding: 80px 70px 0 30px;
+      background: $btnColBackBlue;
+      border-right: 2px solid $btnColTextBlue;
+      color: $btnColTextBlue;
+      position: fixed;
+      top: 70px;
+      transition: .4s;
+      height: 100vh;
+      font-size: 25px;
+      top: 0px;
+      z-index: 999;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../../../../../styles/variables.scss';
+
+.title {
+  color: $blogTitleCol;
+  font: 700 18px 'Quicksand', sans-serif;
+}
+
+.subTitle {
+  color: $paragraphCol;
+  font-size: 14px;
+  line-height: 1.6em;
+  padding-top: 18px;
+}

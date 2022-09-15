@@ -1,0 +1,90 @@
+@import '../../../../../styles/variables.scss';
+
+.prozentUsers {
+  width: 100%;
+  display: flex;
+
+  .wrapperLeft, .wrapperRight {
+    display: flex;
+    flex-direction: column;
+    padding: 66px 90px;
+    flex: 1 1 50%;
+  }
+
+  .wrapperLeft {
+    background: linear-gradient(16deg, rgba(94,128,255,1) 26%, rgba(104,136,255,1) 82%);
+    align-items: flex-end;
+  }
+
+  .wrapperRight {
+    background: linear-gradient(150deg, rgba(233,239,255,1) 0%, rgba(224,233,255,1) 61%);
+    align-items: flex-start;  
+  }
+
+  .iconLeft, .iconRight {
+    height: 66px;
+    width: auto;
+    display: flex;
+    transition: .4s;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  .iconLeft {
+    justify-content: flex-end;
+  }
+
+  .iconRight {
+    justify-content: flex-start;
+  }
+
+  .sumLeft, .sumRight {
+    font: 500 48px 'Quicksand', sans-serif;
+    display: flex;
+    padding-top: 24px;
+    transition: .4s;
+
+    &:hover {
+      transform: skew(20deg);
+    }
+  }
+
+  .sumLeft {
+    justify-content: flex-end;
+    color: $whiteCol;
+  }
+
+  .sumRight {
+    justify-content: flex-start;
+    color: $navHoverCol;
+  }
+
+  .subTitleLeft, .subTitleRight {
+    font: 500 18px 'Quicksand', sans-serif;
+    padding-top: 24px;
+    max-width: 260px;
+    transition: .4s;
+
+    &:hover {
+      transform: scaleX(1.1);
+    }
+  }
+
+  .subTitleLeft {
+    color: $whiteCol;
+    text-align: right;
+  }
+
+  .subTitleRight {
+    color: $navHoverCol;
+    text-align: left;
+  }
+
+  @media screen and (max-width: 655px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}

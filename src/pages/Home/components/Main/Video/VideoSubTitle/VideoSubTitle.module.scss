@@ -1,0 +1,12 @@
+@import '../../../../../../styles/variables.scss';
+
+.subTitle {
+  color: $grayParagraphCol;
+  line-height: 1.6em;
+
+  @media screen and (max-width: 1024px) {
+    & {
+      display: none;
+    }
+  }
+}
